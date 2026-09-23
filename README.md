@@ -36,8 +36,9 @@ setl::PweDecoder<Bits> decoder(waveform);
 
 See [the installed consumer](tests/installed-consumer/main.cpp) for a complete
 host loopback using a two-byte payload. A physical integration must provide edge
-timestamps and apply encoder output levels; that belongs to the later Pulse IO
-extraction.
+timestamps and apply encoder output levels; the separate
+[Grevir Pulse IO](../grevir-pulse-io/README.md) package provides Core modules for
+injected pins and a clock.
 
 ## Timing and ownership contract
 
@@ -107,4 +108,4 @@ cmake --build build/host
 ctest --test-dir build/host --output-on-failure
 ```
 
-Packet Codec and Pulse IO remain separate planned packages.
+Packet remains a separate package; Pulse IO is available as a separate package.
