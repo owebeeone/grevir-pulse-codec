@@ -22,7 +22,9 @@ target_link_libraries(my_app PRIVATE grevir::pulse_codec)
 
 The target supplies C++23, the standard-library mode and its dependencies. Normal
 production builds and installed consumers do not require Catch2 or Test Support.
-Arduino library layout is supplied, but Arduino/target builds are not validated.
+Arduino library layout is supplied. The selected 8-bit Pulse IO composition
+compiles and links for Uno and passes a simulated loopback; broader collector
+widths have not been target-validated.
 
 ```cpp
 #include <GrevirPulseCodec.h>
@@ -95,8 +97,10 @@ compiler probes pass. Raw-token checking confirms braced control bodies in all e
 production/test C++ files. Isolated production/install/consumer
 checks and the same eleven cases under address/undefined sanitizers pass.
 Source review covers the shared policy and conventional AVR 16-bit integer
-promotions; this is not target code-size or cycle evidence. AVR compiler and
-hardware validation remain on hold.
+promotions; these host checks are not target code-size or cycle evidence. The
+selected 8-bit [Pulse IO AVR composition](https://github.com/owebeeone/grevir-wz/blob/main/dev-docs/GrevirPulseIoAvrEvidence.md)
+now has target compiler and simavr evidence. Broader codec collector cases and
+silicon behavior remain unvalidated.
 
 Standalone host validation can use installed dependencies:
 
