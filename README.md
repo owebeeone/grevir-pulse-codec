@@ -1,5 +1,15 @@
 # Grevir Pulse Codec
 
+**Public API:** [Grevir Pulse Codec](https://github.com/owebeeone/grevir-wz/blob/main/docs/api/pulse-codec.md).
+See [installation](https://github.com/owebeeone/grevir-wz/blob/main/docs/install.md) and
+[supported platforms](https://github.com/owebeeone/grevir-wz/blob/main/docs/supported.md).
+The workspace `/docs` is the current user-facing contract; development
+checkpoints below are historical.
+
+Fixed-storage pulse encoding and decoding without a GPIO dependency.
+
+## Development record (historical)
+
 Fixed-storage pulse-width serial encoding and decoding, extracted from Ardoinus
 `pwe_serial.h`. The public types retain their `setl` names. Bit storage, waveform
 parameters, encoding and decoding have separate headers under
