@@ -2,10 +2,10 @@
 #pragma once
 
 #include <grevir/time/time.hpp>
-#include <cstdint>
-#include <cassert>
-#include <limits>
-#include <type_traits>
+#include <grevir/base/compat/cstdint.hpp>
+#include <grevir/base/compat/cassert.hpp>
+#include <grevir/base/compat/limits.hpp>
+#include <grevir/base/compat/type_traits.hpp>
 
 namespace setl {
 

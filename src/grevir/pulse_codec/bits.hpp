@@ -2,11 +2,11 @@
 #pragma once
 
 #include <grevir/base/type_for_size.hpp>
-#include <array>
-#include <cassert>
-#include <cstdint>
-#include <limits>
-#include <type_traits>
+#include <grevir/base/compat/array.hpp>
+#include <grevir/base/compat/cassert.hpp>
+#include <grevir/base/compat/cstdint.hpp>
+#include <grevir/base/compat/limits.hpp>
+#include <grevir/base/compat/type_traits.hpp>
 
 namespace setl {
 
