@@ -75,7 +75,7 @@ template <
   w_type stop_period,
   w_type bit_period,
   TimeUnit units = PWE_UNIT>
-inline const PweWaveformParams<w_type, units> PweWaveformParams1to3 = [] {
+inline constexpr PweWaveformParams<w_type, units> PweWaveformParams1to3 = [] {
   using Params = PweWaveformParams<w_type, units>;
   using P = typename Params::PeriodType;
   static_assert(bit_period >= 4, "A bit must contain at least four clock ticks");
